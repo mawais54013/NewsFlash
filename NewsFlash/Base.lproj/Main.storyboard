@@ -10,7 +10,7 @@
         <!--NewsFlash-->
         <scene sceneID="6sv-y1-Pc4">
             <objects>
-                <tableViewController id="we6-IX-veb" sceneMemberID="viewController">
+                <tableViewController id="we6-IX-veb" customClass="ArticleTableViewController" customModule="NewsFlash" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cx5-h9-2VX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="106.47321428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Article Web View Controller-->
         <scene sceneID="cHV-Oq-Odj">
             <objects>
-                <viewController id="LyT-Jr-SaW" sceneMemberID="viewController">
+                <viewController id="LyT-Jr-SaW" customClass="ArticleWebViewController" customModule="NewsFlash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NRV-EM-rbS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
