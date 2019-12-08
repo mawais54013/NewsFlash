@@ -12,16 +12,15 @@ class NewsHelper {
     func getArticles() {
         
         AF.request("https://newsapi.org/v2/top-headlines?country=us&apiKey=88a51528f6614bcd82f3d8ea3c68cce6").responseJSON { (response) in
-            print(response)
+//            print(response.result)
             
-            if{
-                
-                let weatherJSON : JSON = JSON(response.result.value!)
-                
-            }
-            else
-            {
-                print("Error \(response.result.error)")
+            switch response.result {
+            case .success(let value):
+                if let json = value as? [String: Any] {
+                    print(json)
+                }
+            case .failure(let error):
+                print(error)
             }
         }
     }
