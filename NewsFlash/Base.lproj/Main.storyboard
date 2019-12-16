@@ -35,12 +35,12 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSo-VT-djd">
                                             <rect key="frame" x="5" y="239" width="404" height="25"/>
-                                            <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="KJH-WG-mSW"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newspaper" translatesAutoresizingMaskIntoConstraints="NO" id="0JT-7B-e9W">
@@ -74,7 +74,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="NewsFlash" id="ofA-Wr-VsV">
                         <barButtonItem key="backBarButtonItem" title="Articles" id="0O3-tB-h7D"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="O2x-ha-9Z5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="O2x-ha-9Z5">
+                            <connections>
+                                <action selector="reloadTapped:" destination="we6-IX-veb" id="NhP-N3-s1c"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="LyT-Jr-SaW" kind="show" identifier="goToURL" id="fVl-Kh-3yI"/>
@@ -111,6 +115,9 @@
                         <viewLayoutGuide key="safeArea" id="S9T-4f-hcp"/>
                     </view>
                     <navigationItem key="navigationItem" id="fsc-l7-gOe"/>
+                    <connections>
+                        <outlet property="webView" destination="KoD-vL-jwD" id="t4i-ZO-2Ve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBy-wp-y1I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

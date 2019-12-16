@@ -38,7 +38,26 @@ class NewsHelper {
                             article.url = url
                             article.description = description
                             guard let classification = DocumentClassifier().classify(title + description) else { return }
-                            article.category = classification.prediction.category.rawValue
+                            
+                            switch(classification.prediction.category) {
+                            case .business:
+                                article.category = .business
+                                article.categoryColor = UIColor.blue
+                            case .entertainment:
+                                article.category = .entertainment
+                                article.categoryColor = UIColor.orange
+                            case .politics:
+                                article.category = .politics
+                                article.categoryColor = UIColor.green
+                            case .sports:
+                                article.category = .sports
+                                article.categoryColor = UIColor.gray
+                            case .technology:
+                                article.category = .technology
+                                article.categoryColor = UIColor.black
+                            
+                            }
+                            
                             articles.append(article)
                         }
                         returnArticles(articles)
@@ -56,5 +75,14 @@ class Article {
     var urlToImage = ""
     var url = ""
     var description = ""
-    var category = ""
+    var category : NewsCategory = .business
+    var categoryColor = UIColor.red
+}
+
+enum NewsCategory : String {
+    case business = "💰 Business"
+    case entertainment = "🎥 Entertainment"
+    case politics = "⚖️ Politics"
+    case sports = "⚽️ Sports"
+    case technology = "🔬 Technology"
 }
