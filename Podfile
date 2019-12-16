@@ -8,5 +8,6 @@ target 'NewsFlash' do
   # Pods for NewsFlash
 pod 'Alamofire', '~> 5.0.0-rc.3'
 pod 'DocumentClassifier', '1.2.0'
+pod 'Kingfisher', '5.12.0'
 
 end

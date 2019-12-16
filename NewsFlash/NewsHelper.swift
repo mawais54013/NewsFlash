@@ -10,7 +10,7 @@ import Alamofire
 import DocumentClassifier
 
 class NewsHelper {
-    func getArticles() {
+    func getArticles(returnArticles : @escaping ([Article]) -> Void) {
         
         AF.request("https://newsapi.org/v2/top-headlines?country=us&apiKey=88a51528f6614bcd82f3d8ea3c68cce6").responseJSON { (response) in
 //            print(response.result)
@@ -41,6 +41,7 @@ class NewsHelper {
                             article.category = classification.prediction.category.rawValue
                             articles.append(article)
                         }
+                        returnArticles(articles)
                     }
                 }
             case .failure(let error):
