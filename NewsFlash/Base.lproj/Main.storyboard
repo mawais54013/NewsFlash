@@ -14,7 +14,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cx5-h9-2VX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="264" id="3pf-aX-GRb" customClass="ArticleCell" customModule="NewsFlash" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="264"/>
@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="qVb-am-hAe">
-                                            <rect key="frame" x="5" y="0.0" width="404" height="50"/>
+                                            <rect key="frame" x="5" y="10" width="404" height="50"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="9zH-xJ-QhQ"/>
@@ -44,7 +44,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newspaper" translatesAutoresizingMaskIntoConstraints="NO" id="0JT-7B-e9W">
-                                            <rect key="frame" x="5" y="50" width="404" height="189"/>
+                                            <rect key="frame" x="5" y="60" width="404" height="179"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -52,7 +52,7 @@
                                         <constraint firstItem="qVb-am-hAe" firstAttribute="leading" secondItem="dux-De-xXi" secondAttribute="leading" constant="5" id="FoM-2x-0IF"/>
                                         <constraint firstAttribute="bottom" secondItem="GSo-VT-djd" secondAttribute="bottom" id="MmR-yu-omj"/>
                                         <constraint firstItem="GSo-VT-djd" firstAttribute="top" secondItem="0JT-7B-e9W" secondAttribute="bottom" id="RSh-kU-qlq"/>
-                                        <constraint firstItem="qVb-am-hAe" firstAttribute="top" secondItem="dux-De-xXi" secondAttribute="top" id="ZRR-VA-bHo"/>
+                                        <constraint firstItem="qVb-am-hAe" firstAttribute="top" secondItem="dux-De-xXi" secondAttribute="top" constant="10" id="ZRR-VA-bHo"/>
                                         <constraint firstItem="0JT-7B-e9W" firstAttribute="leading" secondItem="dux-De-xXi" secondAttribute="leading" constant="5" id="enY-Bs-7ua"/>
                                         <constraint firstItem="GSo-VT-djd" firstAttribute="leading" secondItem="dux-De-xXi" secondAttribute="leading" constant="5" id="gBc-kv-qQt"/>
                                         <constraint firstAttribute="trailing" secondItem="0JT-7B-e9W" secondAttribute="trailing" constant="5" id="gxH-eZ-8qa"/>
@@ -60,6 +60,7 @@
                                         <constraint firstAttribute="trailing" secondItem="qVb-am-hAe" secondAttribute="trailing" constant="5" id="srp-0c-FXM"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="articleImageView" destination="0JT-7B-e9W" id="dBP-z6-kLM"/>
                                     <outlet property="categoryLabel" destination="GSo-VT-djd" id="ala-qh-ReN"/>
